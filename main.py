@@ -26,7 +26,8 @@ def show(data = None):
     for key, value in data.items():
         num += 1; sum += value["age"]
         print("{:<8} {:<28} {:<8} {:<16} {:<32}".format(key, value["name"], value["age"], value["phone"], value["email"]))
-        print(f"                             Average: {sum/num}")
+    
+    print(f"                             Average: {sum/num}")
 
 def create():
     print()
@@ -53,7 +54,6 @@ def create():
 
     try:
         new_id = int(list(data)[-1]) + 1
-        print(new_id)
     except:
         new_id = 1
         
