@@ -19,11 +19,14 @@ def show(data = None):
         return
 
     print()
-
     print("{:<8} {:<28} {:<8} {:<16} {:<32}".format('Id','Name','Age','Phone','Email'))
+
+    sum = 0; num = 0
     
     for key, value in data.items():
+        num += 1; sum += value["age"]
         print("{:<8} {:<28} {:<8} {:<16} {:<32}".format(key, value["name"], value["age"], value["phone"], value["email"]))
+        print(f"                             Average: {sum/num}")
 
 def create():
     print()
